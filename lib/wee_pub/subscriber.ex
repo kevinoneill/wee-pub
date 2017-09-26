@@ -83,14 +83,18 @@ defmodule WeePub.Subscriber do
     ... processes the message
   end
   ```
+
   will be transformed to
+
   ```
   def handle_cast(%{id, id} = message, state) when id = 42 do
     state = ... process the message
     {:noreply, state}
   end
+  ```
 
-  and the pattern and Module will be registered with `WeePub.Broadcaster`
+  The pattern and Module will be registered with `WeePub.Broadcaster`
+  as part of the generated `init` function.
 
   The `where:` clause is optional but when included needs to obey the
   same restrictions as a `when` guard clause.
