@@ -58,7 +58,7 @@ defmodule WeePubTest.Subscriber do
     end
 
     test "it can recieve messages filtered by simple where condition" do
-      publish( %{id: 1})
+      publish(%{id: 1})
       assert_state {"%{id: id} = message, where: id == 1", %{id: 1}}
     end
 
@@ -67,6 +67,5 @@ defmodule WeePubTest.Subscriber do
       assert_state {"%{id: id, age: age} = message, where: age > 16 and id != 1", %{id: 6, age: 18}}
     end
   end
-
 
 end

@@ -45,7 +45,7 @@ end
 - [ ] Subscriber explicit state handling
 - [ ] Allow generated `GenServer` methods to be overridden
 - [ ] Specs for all interfaces
-- [ ] Docs for all public methods
+- [x] Docs for all important methods
 
 ## Summary
 
